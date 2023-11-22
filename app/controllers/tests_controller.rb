@@ -1,3 +1,5 @@
+require 'byebug'
+
 class TestsController < Simpler::Controller
 
   def index
@@ -8,4 +10,7 @@ class TestsController < Simpler::Controller
 
   end
 
+  def show
+    @test = Test.find(id: params[:id])
+  end
 end
